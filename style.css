@@ -169,7 +169,7 @@ footer a {
     left: 50%;
   }
 }
-@keyframes skide-back {
+@keyframes slide-back {
   from {
     left: 50%;
   }
