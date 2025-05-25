@@ -71,9 +71,14 @@ body * {
   border-radius: 50%;
   z-index: 1;
   transition: transform 0.3s ease;
+
+  animation: skide-back 0.2s;
 }
 .light #switch button {
-  transform: translate(32px, -50%);
+  animation: slide-in 0.2s forwards;
+}
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 #switch span {
   display: block;
@@ -154,4 +159,21 @@ footer a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 500;
+}
+/*animation*/
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes skide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
